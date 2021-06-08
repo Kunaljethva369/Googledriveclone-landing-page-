@@ -1,0 +1,1153 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    overflow: hidden;
+}
+
+
+
+/* commom css */
+
+.searchbar input:focus, .search button:focus, .itemname input:focus, .includeword input:focus, .sharedwith input:focus, .left input:focus {
+    outline: none;
+}
+
+.check a:hover, .cog a:hover, .qns a:hover,.search:hover,.downarrow:hover,.lastCog:hover,.grid:hover,.info:hover,.greater:hover{
+    border-radius: 50%;
+    background-color: rgba(60,64,67,0.08) !important;
+}
+/* header */
+
+.header {
+    border-bottom: 1px solid gray;
+}
+
+.row {
+    padding: 8px;
+}
+
+/* logo */
+
+.Imageheader span {
+    color: #5f6368;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.Imageheader a {
+    text-decoration: none;
+}
+
+/* searchbar */
+
+.searchbar {
+    background-color: #f1f3f4;
+    padding: 0.500rem;
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
+}
+
+.searchbar {
+    display: flex;
+    width: 51vw !important;
+}
+
+.search {
+    padding-right: 1rem;
+    padding: 0.500rem;
+}
+
+button {
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+}
+
+.search button a svg,.downarrow svg,.check svg,.qns svg,.cog svg,.middleicon svg{
+    fill: #5f6368 !important;
+}
+
+.searchbar input {
+    width: 100%;
+    background-color: transparent;
+    border: 0px !important;
+    padding-left: 0.400rem;
+}
+
+.downarrow{
+    padding: 0.500rem;
+}
+
+
+/* searchbar cross */
+
+.searchcross {
+    font-size: 1rem;
+    display: none;
+    align-items: center;
+    margin-right: 0.600rem;
+}
+
+/* icons */
+
+.icon-header {
+    display: flex;
+}
+
+.col-lg-2, .icon-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.check, .cog, .qns {
+    display: flex;
+    align-items: center;
+}
+
+.icon-header .check a, .cog a, .qns a {
+    cursor: pointer;
+    margin-left: 0.800rem;
+    padding: 0.500rem;
+}
+
+
+/* user image */
+
+.col-lg-1, .last {
+    display: flex;
+    justify-content: center;
+}
+
+.lastCog {
+    display: flex;
+    align-items: center;
+    padding: 0.500rem;
+}
+
+.lastCog img {
+    width: 22px;
+    color: rgb(205, 204, 204);
+    cursor: pointer;
+}
+
+.lastImg {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 0.200rem;
+}
+
+.lastImg img {
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.lastImg:hover {
+    padding: 0.200rem;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 245);
+}
+
+/* for search bar bg color change */
+
+.open {
+    background-color: white;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+}
+
+/* inside search bar content */
+
+.pdf {
+    display: flex;
+    background-color: white;
+    padding: 0.5rem 0.5rem 0rem 1.5rem;
+    margin: 0rem 2px;
+}
+
+.pdf-top {
+    border-top: 1px solid grey;
+}
+
+.more {
+    background-color: rgb(205, 204, 204);
+    padding: 1rem;
+    border-top: 1px solid black;
+    padding-left: 1.5rem;
+    margin: 0rem 2px;
+}
+
+.pdf:hover, .photoandimage:hover, .anyonecontent p:hover,.datecontent p:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.contentpdf {
+    display: none;
+    position: absolute;
+    width: 51vw !important;
+    background-color: white;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+}
+
+.pdf p {
+    font-size: 1rem;
+    padding-top: 0.500rem;
+}
+
+.contentpdf.contentOpener {
+    display: block;
+    z-index: 1;
+}
+
+.contentPdf {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.file {
+    color: red;
+}
+
+.doc {
+    color: blue;
+}
+
+.spreadsheet {
+    color: green;
+}
+
+.presenation {
+    color: yellow;
+}
+
+.photo {
+    color: red;
+}
+
+.videos {
+    color: red;
+}
+
+/* down */
+
+.contentDown {
+    height: auto;
+    padding: 1rem;
+    overflow-y: scroll;
+    background-color: white;
+    color: black;
+    box-shadow: 2px 12px 12px rgb(0 0 0 / 8%);
+}
+
+#down {
+    display: none;
+}
+
+#down.downOpener {
+    height: 70vh;
+    display: block;
+    position: absolute;
+    width: 51vw;
+    padding: 0rem !important;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.type1, .location, .checkbox, .date, .itemname, .includeword, .sharedwith, .followup {
+    display: flex;
+    padding: 1rem;
+}
+
+.activetype1 {
+    margin-top: 1.5rem;
+}
+
+.photoandimage {
+    cursor: pointer;
+    padding-left: 1rem !important;
+}
+
+#any1 {
+    cursor: pointer;
+    padding: 0rem 0rem 0.900rem 1rem;
+}
+
+.type1 span, .date span, .followup span {
+    padding-right: 5rem;
+}
+
+.any {
+    width: fit-content;
+    border-bottom: 1px solid black;
+}
+
+.any span {
+    padding-left: 0.500rem;
+}
+
+.any:hover, .itemname input:hover, .includeword input:hover, .sharedwith input:hover {
+    border-bottom: 1px solid blue;
+}
+
+.itemname input, .includeword input, .sharedwith input {
+    width: 100%;
+    border: transparent;
+    border-bottom: 1px solid black;
+}
+
+.locationbtn {
+    padding: 0.200rem 0.500rem 0.200rem 0.500rem;
+    border: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.locationbtn:hover {
+    box-shadow: 2px 10px 10px rgb(0 0 0 / 10%);
+}
+
+.checkbox, .col-lg-8 {
+    display: flex;
+}
+
+.ownerbin {
+    margin-right: 5rem;
+    font-size: 1.2rem;
+}
+.starredbtn{
+    font-size: 1.2rem;
+}
+
+.ownerbin input[type="checkbox"], .starredbtn input[type="checkbox"] {
+    margin-right: 0.500rem;
+}
+
+.btnContainer {
+    display: flex;
+    padding: 1rem;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    z-index: 0;
+}
+
+.rightbtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reset {
+    margin-right: 2rem;
+}
+
+.reset input {
+    text-transform: uppercase;  
+    padding: 0.300rem 1.5rem 0.300rem 1.5rem;
+    border: transparent !important;
+    background-color: transparent !important;
+}
+
+.reset input[type="button"]:hover {
+    padding: 0.300rem 1.5rem 0.300rem 1.5rem;
+    box-shadow: 2px 10px 30px rgb(10 10 10 / 20%);
+    background-color: white !important;
+    transition: 0.5s all;
+}
+
+.learnmore  input[type="button"]{
+    background: transparent;
+    border: transparent;
+    padding: 0.200rem 0.400rem 0.200rem 0.400rem;
+    color: #4285f4;
+    font-weight: 500 !important;
+}
+.learnmore input[type="button"]:hover{
+    background-color: rgba(60,64,67,0.08);
+    padding: 0.200rem 0.400rem 0.200rem 0.400rem;
+    color: #4285f4;
+    box-shadow: rgb(0 0 0 / 8%);
+}
+
+.searchbtn input {
+    padding: 0.200rem 0.800rem 0.200rem 0.800rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(52, 80, 216);
+    border: transparent;
+}
+
+.cross {
+    position: fixed;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.type1content ,.anyonecontent,.datecontent,.followcontent{
+    display: none;
+}
+
+.type1content.type1contentOpener,.anyonecontent.anyonecontentOpener,.datecontent.datecontentOpener,.followcontent.followcontentOpener {
+    display: block;
+    position: absolute;
+    width: fit-content;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.type1content span,.datecontent p,.anyonecontent p,.followcontent p{
+    width: 100%;
+    cursor: pointer;
+    margin: 0rem !important;
+    padding: 0.100rem 1rem 0rem 1rem !important;
+}
+
+
+/* Right Sider */
+
+.rightSider {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.rightRow.imageCloser {
+    display: none;
+}
+
+.rightRow.imagerOpener {
+    display: flex;
+}
+
+.rightRow {
+    border-left: 1px solid gray;
+    height: 100vh;
+    padding: 1rem 0rem 0rem 0rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.calender, .keep, .task {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.line {
+    color: gray;
+    font-size: 1.3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.plus {
+    cursor: pointer;
+    margin-top: 4rem;
+    color: gray;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    font-size: 1.4rem;
+    color: gray;
+    position: absolute;
+    right: 17px;
+    z-index: 1;
+}
+
+.slider svg {
+    cursor: pointer;
+}
+
+.greater{
+    padding: 0.500rem;
+    display: flex;
+    position: absolute;
+    right: -8px;
+}
+
+.less {
+    display: none;
+    position: fixed;
+    margin-left: -18px;
+    font-size: 1.4rem;
+    background-color: gainsboro;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.less:hover {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+/* left side */
+
+.leftSider {
+    position: absolute;
+    width: 96.5%;
+}
+
+.leftSider.leftsliderOpener {
+    width: 100%;
+}
+
+.leftrow {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+}
+
+.left {
+    width: 19%;
+    padding-right: 0rem !important;
+}
+
+.mydrive {
+    margin-top: 2rem;
+}
+
+.dis {
+    background-color: transparent;
+}
+
+.active {
+    background-color: #e8f0fe;
+    padding: 0.500rem;
+    padding-right: 4rem;
+    border-radius: 0rem 5rem 5rem 0rem;
+    color: #1967d2;
+}
+
+.active svg{
+    fill: #4285f4;
+}
+
+.left input[type="checkbox"] {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.mydrive, .shared, .recent, .starred, .bin, .cloud {
+    display: flex;
+    padding: 0.500rem 2rem 0.500rem 2rem;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    left: -2rem;
+    padding-left: 2rem;
+}
+
+.mydrive:hover, .shared:hover, .recent:hover, .starred:hover, .bin:hover, .cloud:hover {
+    background-color: gainsboro;
+    padding: 0.500rem 2rem 0.500rem 2rem;
+    border-radius: 0rem 5rem 5rem 0rem;
+}
+
+.icon{
+    font-size: 1.2rem;
+    padding-right: 1rem;
+}
+
+.leftbtn {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+.leftbtn input[type="button"] {
+    padding: 0.250rem 1rem 0.250rem 1rem;
+    background-color: transparent;
+    border: 1px solid gainsboro;
+    font-size: 17px;
+    font-weight: 400;
+    color: #1967d2;
+}
+
+.leftbtn input[type="button"]:hover {
+    color: #1967d2;
+    background-color: #cad9edec;
+}
+
+.left span {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* left middle */
+
+.leftmiddle {
+    width: 80.4%;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 0rem !important;
+}
+
+.leftmiddle.leftmiddleOpener {
+    width: 80.9%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #dfdede;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* box */
+
+.box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.col-lg-3 {
+    width: 24% !important;
+}
+
+.qa {
+    padding: 1rem 0rem 1rem 0rem;
+    font-size: 1.4rem !important;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.box-content {
+    height: max-content;
+    background-color: whitesmoke;
+    margin-left: 0.800rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.500rem;
+    padding: 0.400rem;
+    text-align: center;
+}
+
+/* middle */
+
+.middlecontainer {
+    display: flex;
+}
+
+.middlerow {
+    width: 100%;
+    padding-bottom: 0rem !important;
+}
+
+.middlecontent {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1.4rem;
+    width: 80%;
+    border-bottom: 1px solid gray;
+}
+
+.middlecontent.middlecontentOpener {
+    margin-right: -2rem;
+    width: 84%;
+}
+
+.middlecontent span {
+    display: flex;
+    justify-content: flex-start;
+    width: inherit;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+
+.middlecontent span svg {
+    margin-left: 0.200rem;
+    margin-top: 0.250rem;
+}
+
+.middleicon {
+    display: flex;
+    justify-content: flex-end;
+    width: inherit;
+    font-size: 1.2rem;
+}
+
+.grid{
+    cursor: pointer;
+    z-index: 0;
+    margin-right: 1.5rem;
+    padding: 0.500rem;
+}
+.info{
+    cursor: pointer;
+    z-index: 0;
+    padding: 0.500rem;
+}
+    
+
+.new {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    padding: 0.100rem 0.500rem 0.100rem 0.500rem;
+    border-radius: 5rem 5rem 5rem 5rem;
+    width: max-content;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.new:hover {
+    background: whitesmoke;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+}
+
+.new span {
+    margin-right: 1.5rem;
+    margin-left: 0.600rem;
+}
+
+.new::before {
+    margin-left: 0.500rem;
+    padding-top: 0.500rem;
+    content: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2236%22 height=%2236%22 viewBox=%220 0 36 36%22%3E%3Cpath fill=%22%2334A853%22 d=%22M16 16v14h4V20z%22/%3E%3Cpath fill=%22%234285F4%22 d=%22M30 16H20l-4 4h14z%22/%3E%3Cpath fill=%22%23FBBC05%22 d=%22M6 16v4h10l4-4z%22/%3E%3Cpath fill=%22%23EA4335%22 d=%22M20 16V6h-4v14z%22/%3E%3Cpath fill=%22none%22 d=%22M0 0h36v36H0z%22/%3E%3C/svg%3E');
+}
+
+.new-s {
+    display: none;
+}
+
+.infocontent{
+    width: max-content;
+    background-color: whitesmoke;
+    position: absolute;
+    top:142px;
+    right: 57px;
+    height: 100vh;
+    display: none;
+}
+.infomydrive{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+.infocross{
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+.infocontent.infocontentOpener{
+    display: block;
+    transition: all 2s ease !important;
+}
+.infocontent.infocontentwidth{
+    width: max-content;
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+}
+.leftmiddle.middlecontentOpener{
+    width: 61.4%;
+}
+
+
+
+
+
+
+/* bars */
+
+.bars {
+    display: none;
+}
+
+.s-leftcross {
+    display: none;
+}
+
+/* media query */
+
+/* for large screen(lg) */
+
+@media only screen and (min-width:992px) and (max-width: 1327px) {
+    .leftmiddle {
+        width: 79%;
+    }
+}
+
+/* for tablet view (md) */
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .col-md-9, .searchbar, .contentpdf.contentOpener, #down.downOpener {
+        width: 70vw !important;
+    }
+    .last {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* new-s */
+    .new-s {
+        background-color: white;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+        padding: 0.100rem 0.200rem 0.100rem 0.200rem;
+        border-radius: 5rem 5rem 5rem 5rem;
+        width: max-content;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        cursor: pointer;
+        z-index: 0;
+        margin-top: 0.500rem;
+    }
+    .new-s:hover {
+        background: whitesmoke;
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+    }
+    .new-s span {
+        margin-right: 1.2rem;
+        margin-left: 0.600rem;
+    }
+    .new-s::before {
+        margin-left: 0.500rem;
+        padding-top: 0.500rem;
+        content: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2236%22 height=%2236%22 viewBox=%220 0 36 36%22%3E%3Cpath fill=%22%2334A853%22 d=%22M16 16v14h4V20z%22/%3E%3Cpath fill=%22%234285F4%22 d=%22M30 16H20l-4 4h14z%22/%3E%3Cpath fill=%22%23FBBC05%22 d=%22M6 16v4h10l4-4z%22/%3E%3Cpath fill=%22%23EA4335%22 d=%22M20 16V6h-4v14z%22/%3E%3Cpath fill=%22none%22 d=%22M0 0h36v36H0z%22/%3E%3C/svg%3E');
+    }
+    /* right slider */
+    .calender {
+        margin-top: 2rem !important;
+    }
+    .plus {
+        margin-top: 2rem !important;
+    }
+    .slider {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 0.500rem;
+        z-index: 1;
+    }
+    /* middle */
+    .middlecontainer {
+        display: none;
+    }
+    /* left slider */
+    .left {
+        display: none !important;
+    }
+    .left.leftsmallOpener {
+        display: block !important;
+        width: max-content;
+        height: 50vh;
+        position: absolute;
+        left: 0rem;
+        background-color: whitesmoke;
+        overflow-y: scroll;
+    }
+    .mydrive {
+        margin-top: 0.500rem !important;
+        margin-bottom: 0rem !important;
+    }
+    .mydrive, .shared, .recent, .starred, .bin, .cloud {
+        padding: 0.3rem 2rem 0.3rem 2rem !important;
+    }
+    .leftbtn {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* leftmiddle */
+
+    .leftmiddle.leftmiddleOpener {
+        width: 100%;
+        z-index: -1;
+    }
+    .box {
+        display: flex;
+    }
+    .col-lg-3 {
+        width: 50% !important;
+    }
+
+    /* bars */
+    .bars {
+        display: flex;
+        width: max-content;
+        position: relative;
+        font-size: 1.2rem;
+        color: red;
+        padding-left: 0.200rem;
+        cursor: pointer;
+    }
+}
+
+/* for medium mobile view (sm)*/
+
+@media only screen and (min-width:577px) and (max-width:767px) {
+    .searchbar, .contentpdf.contentOpener, #down.downOpener {
+        width: 70vw !important;
+        z-index: 2;
+    }
+    .last {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end !important;
+    }
+    /* new-s */
+    .new-s {
+        background-color: white;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+        padding: 0.100rem 0.200rem 0.100rem 0.200rem;
+        border-radius: 5rem 5rem 5rem 5rem;
+        width: max-content;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        cursor: pointer;
+        z-index: 0;
+        margin-top: 0.500rem;
+    }
+    .new-s:hover {
+        background: whitesmoke;
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+    }
+    .new-s span {
+        margin-right: 1.2rem;
+        margin-left: 0.600rem;
+    }
+    .new-s::before {
+        margin-left: 0.500rem;
+        padding-top: 0.500rem;
+        content: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2236%22 height=%2236%22 viewBox=%220 0 36 36%22%3E%3Cpath fill=%22%2334A853%22 d=%22M16 16v14h4V20z%22/%3E%3Cpath fill=%22%234285F4%22 d=%22M30 16H20l-4 4h14z%22/%3E%3Cpath fill=%22%23FBBC05%22 d=%22M6 16v4h10l4-4z%22/%3E%3Cpath fill=%22%23EA4335%22 d=%22M20 16V6h-4v14z%22/%3E%3Cpath fill=%22none%22 d=%22M0 0h36v36H0z%22/%3E%3C/svg%3E');
+    }
+    /* right slider */
+    .calender {
+        margin-top: 2rem !important;
+    }
+    .plus {
+        margin-top: 2rem !important;
+    }
+    .slider {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 0.500rem;
+    }
+    /* middle */
+    .middlecontainer {
+        display: none;
+    }
+    /* left slider */
+    .leftSider {
+        width: 100% !important;
+    }
+    .left {
+        display: none !important;
+    }
+    .left.leftsmallOpener {
+        display: block !important;
+        width: max-content;
+        height: 45vh;
+        position: absolute;
+        left: 0rem;
+        background-color: whitesmoke;
+        overflow-y: scroll;
+    }
+    .mydrive {
+        margin-top: 0.500rem !important;
+        margin-bottom: 0rem !important;
+    }
+    .mydrive, .shared, .recent, .starred, .bin, .cloud {
+        padding: 0.3rem 2rem 0.3rem 2rem !important;
+    }
+    .leftbtn {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    /* leftmiddle */
+    
+    .leftmiddle.leftmiddleOpener {
+        width: 100%;
+        z-index: 0;
+    }
+    .box {
+        display: block;
+    }
+    .col-lg-3 {
+        width: 100% !important;
+    }
+
+    /* bars */
+    .bars {
+        display: flex;
+        width: max-content;
+        position: relative;
+        font-size: 1.2rem;
+        color: red;
+        padding-left: 0.200rem;
+        cursor: pointer;
+    }
+}
+
+/* for small mobile view (s) */
+
+@media only screen and (max-width:576px) {
+    /* header */
+    .col-12, .Imageheader {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .col-12, .searchbar, .contentpdf.contentOpener, #down.downOpener {
+        width: 92vw !important;
+        margin-left: 0rem !important;
+        z-index: 2 !important;
+    }
+    .col-6, .icon-header {
+        padding-left: 0rem !important;
+    }
+    .col-6, .last {
+        padding-right: 0rem !important;
+    }
+    .last {
+        width: 92%;
+        display: flex;
+        justify-content: flex-end !important;
+    }
+    /* new-s */
+    .new-s {
+        background-color: white;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+        padding: 0.100rem 0.200rem 0.100rem 0.200rem;
+        border-radius: 5rem 5rem 5rem 5rem;
+        width: max-content;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        cursor: pointer;
+        z-index: 0;
+        margin-top: 0.500rem;
+    }
+    .new-s:hover {
+        background: whitesmoke;
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+    }
+    .new-s span {
+        margin-right: 1.2rem;
+        margin-left: 0.600rem;
+    }
+    .new-s::before {
+        margin-left: 0.500rem;
+        padding-top: 0.500rem;
+        content: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2236%22 height=%2236%22 viewBox=%220 0 36 36%22%3E%3Cpath fill=%22%2334A853%22 d=%22M16 16v14h4V20z%22/%3E%3Cpath fill=%22%234285F4%22 d=%22M30 16H20l-4 4h14z%22/%3E%3Cpath fill=%22%23FBBC05%22 d=%22M6 16v4h10l4-4z%22/%3E%3Cpath fill=%22%23EA4335%22 d=%22M20 16V6h-4v14z%22/%3E%3Cpath fill=%22none%22 d=%22M0 0h36v36H0z%22/%3E%3C/svg%3E');
+    }
+    /* down */
+    .type1, .location, .checkbox, .date, .itemname, .includeword, .sharedwith, .followup {
+        display: flex;
+        padding: 0.7rem 0rem 0.7rem 0.2rem !important;
+    }
+    .type1 span, .location span, .checkbox span, .date span, .itemname span, .includeword span, .sharedwith span, .followup span {
+        padding-right: 1.5rem !important;
+    }
+    .ownerbin,.starredbtn{
+        font-size: 1rem;
+        margin-right: 1rem !important;
+    }
+    /* right slider */
+    .calender {
+        margin-top: 2rem !important;
+    }
+    .calender, .keep, .task {
+        margin-bottom: 1.2rem !important;
+    }
+    .plus {
+        margin-top: 1.2rem !important;
+    }
+    .slider {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 0.500rem;
+        z-index: 1;
+    }
+    /* middle */
+    .middlecontainer {
+        display: none;
+    }
+    /* left slider */
+    .leftSider {
+        width: 100% !important;
+    }
+    .left {
+        display: none !important;
+    }
+    .left.leftsmallOpener {
+        display: block !important;
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        z-index: 2;
+        left: 0rem;
+        background-color: whitesmoke;
+        overflow-y: scroll;
+    }
+    .mydrive {
+        margin-top: 0.500rem !important;
+        margin-bottom: 0rem !important;
+    }
+    .mydrive, .shared, .recent, .starred, .bin, .cloud {
+        padding: 0.3rem 2rem 0.3rem 2rem !important;
+        width: 50%;
+    }
+    .leftbtn {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .leftmiddle.leftmiddleOpener {
+        width: 100%;
+        z-index: 0;
+    }
+    .box {
+        display: block;
+    }
+    .col-lg-3 {
+        width: 100% !important;
+    }
+    /* bars */
+    .bars {
+        display: flex;
+        width: max-content;
+        position: relative;
+        font-size: 1.2rem;
+        color: red;
+        padding-left: 0.200rem;
+        cursor: pointer;
+    }
+}

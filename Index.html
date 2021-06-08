@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- for logo in the title tab -->
+    <link rel="icon" href="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/logo.png" type="image/png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/Google.css">
+
+    <title>My Drive - Google Drive</title>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <div class="container-fluid header">
+        <div class="row">
+
+            <!-- logo -->
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12">
+                <div class="Imageheader">
+                    <a href="#" title="Dirve">
+                        <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/logo.png" width="60px">
+                        <span>Drive</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- search bar -->
+            <div class="col-lg-7 col-md-9 col-sm-9 col-12">
+                <div class="searchbar" id="searchBar">
+                    <div class="search">
+                        <button><a href="#" title="Search">
+                                <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z">
+                                    </path>
+                                    <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                </svg>
+                            </a></button>
+                    </div>
+                    <input type="text" onclick="searchBar()" oninput="searchcross()" id="input"
+                        placeholder="Search in Drive" />
+
+
+                    <button class="searchcross" id="searchcross">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <button class="downarrow" onclick="down()">
+                        <a href="#" title="Search Option">
+                            <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5 5 5-5z"></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+
+                <!-- SearchBar Click Content -->
+                <div class="contentpdf" id="pdf">
+                    <div class="pdf pdf-top">
+                        <div class="contentPdf file">
+                            <i class="far fa-file-pdf"></i>
+                        </div>
+                        <p>PDFs</p>
+                    </div>
+                    <div class="pdf">
+                        <div class="contentPdf doc">
+                            <i class="far fa-file-alt"></i>
+                        </div>
+                        <p>Documents</p>
+                    </div>
+                    <div class="pdf">
+                        <div class="contentPdf spreadsheet">
+                            <i class="far fa-file-excel"></i>
+                        </div>
+                        <p>SpreadSheets</p>
+                    </div>
+                    <div class="pdf">
+                        <div class="contentPdf presenation">
+                            <i class="far fa-file-powerpoint"></i>
+                        </div>
+                        <p>Presenation</p>
+                    </div>
+                    <div class="pdf">
+                        <div class="contentPdf photo">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+                        <p>Photos and images</p>
+                    </div>
+                    <div class="pdf">
+                        <div class="contentPdf videos">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <p>Videos</p>
+                    </div>
+                    <div class="more">
+                        <button>More search tools</button>
+                    </div>
+                </div>
+
+                <!-- Down Click -->
+                <div class="contentDown" id="down">
+                    
+                    <!-- for cross to close the down content -->
+                    <div class="cross" onclick="downcross()">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <!-- for type in down content -->
+                    <div class="type1 activetype1">
+                        <div class="col-lg-4 col-4">
+                            <span>Type</span>
+                        </div>
+                        <div class="any col-lg-8 col-8" onclick="any()">
+                            <span id="any">Any</span>
+                            <div class="type1content" id="type1">
+                                <span id="any1">Any</span>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="photo">Photos & images</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="contentpdf">PDFs</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="doc">Documents</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="spreadsheet">Spreadsheets</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="presenation">Presenation</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="forms">Forms</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="audio">Audio</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="video">Videos</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="archives">Archives (Zip)</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="drawing">Drawings</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="shortcuts">Shortcuts</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="folder">Folders</span>
+                                </div>
+                                <div class="photoandimage">
+                                    <i class="fas fa-video"></i>
+                                    <span id="sites">Sites</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-sort-down fa-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- for owner in down content -->
+                    <div class="type1">
+                        <div class="col-lg-4 col-4">
+                            <span>Owner</span>
+                        </div>
+                        <div class="any col-lg-8 col-8" onclick="owner()">
+                            <span id="anyone">Anyone</span>
+                            <div class="anyonecontent" id="anyonecontent">
+                                <p id="anyonedown">Anyone</p>
+                                <p id="owned">Owned by me</p>
+                                <p id="notowned">Not owned by me</p>
+                                <p id="sp">Specific person...</p>
+                            </div>
+                            <i class="fas fa-sort-down fa-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <div class="col-lg-4 col-4">
+                            <span>Location</span>
+                        </div>
+                        <div class="col-lg-8 col-8">
+                            <input class="locationbtn" type="button" value="Anywhere" />
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <div class="col-lg-4 col-4">
+                        </div>
+                        <div class="col-lg-8 col-8">
+                            <div class="ownerbin"><input type="checkbox">In bin</input></div>
+                            <div class="starredbtn"><input type="checkbox">Starred</input></div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="date">
+                        <div class="col-lg-4 col-4">
+                            <span>Date modified</span>
+                        </div>
+                        <div class="any col-lg-8 col-8" onclick="date()">
+                            <span id="date">Any time</span>
+                            <i class="fas fa-sort-down fa-lg"></i>
+                            <div class="datecontent" id="datecontent">
+                                <p id="dateany">Any time</p>
+                                <p id="today">Today</p>
+                                <p id="yes">Yesterday</p>
+                                <p id="last7">Last 7 days</p>
+                                <p id="last30">Last 30 days</p>
+                                <p id="last90">Last 90 days</p>
+                                <p id="custom">Custom...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="itemname">
+                        <div class="col-lg-4 col-4">
+                            <span>Item name</span>
+                        </div>
+                        <div class="col-lg-8 col-8">
+                            <input type="text" placeholder="Enter a term that matches part of the file name" />
+                        </div>
+                    </div>
+                    
+                    <div class="includeword">
+                        <div class="col-lg-4 col-4">
+                            <span>Include the words</span>
+                        </div>
+                        <div class="col-lg-8 col-8">
+                            <input type="text" placeholder="Enter words found in the file" />
+                        </div>
+                    </div>
+                    
+                    <div class="sharedwith">
+                        <div class="col-lg-4 col-4">
+                            <span>Shared with</span>
+                        </div>
+                        <div class="col-lg-8 col-8">
+                            <input type="text" placeholder="Enter a name or email address..." />
+                        </div>
+                    </div>
+                    
+                    <div class="followup">
+                        <div class="col-lg-4 col-4">
+                            <span>Follow up</span>
+                        </div>
+                        <div class="any col-lg-8 col-8" onclick="followup()">
+                            <span id="dash">-</span>
+                            <i class="fas fa-sort-down fa-lg"></i>
+                            <div class="followcontent" id="followcontent">
+                                <p id="dashcontent">-</p>
+                                <p id="followany">Any</p>
+                                <p id="suggestions">Suggestions only</p>
+                                <p id="action">Action item only</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btnContainer">
+                        <div class="learnmore col-lg-4">
+                            <input type="button" value="Learn More"></input>
+                        </div>
+                        <div class="rightbtn col-lg-8">
+                            <div class="reset">
+                                <input type="button" value="Reset">
+                            </div>
+                            <div class="searchbtn">
+                                <input type="button" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- icons -->
+            <div class="col-lg-2 col-sm-6 col-6">
+                <div class="icon-header">
+                    <div class="check">
+                        <button>
+                            <a href="#" title="Ready For Offline">
+                                <svg viewBox="0 0 24 24" width="24px" height="24px" class=" a-s-fa-Ha-pa"
+                                    focusable="false">
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                    </path>
+                                    <path d="M7 15h10v2H7zm3.3-3.8L8.4 9.3 7 10.7l3.3 3.3L17 7.3l-1.4-1.4z"></path>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="qns">
+                        <button>
+                            <a href="#" title="Support">
+                                <svg class="wo35tf" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                                    viewBox="0 0 24 24" fill="#000000" focusable="false">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path
+                                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="cog">
+                        <button>
+                            <a href="#" title="Setting">
+                                <svg class=" a-s-fa-Ha-pa" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000"
+                                    focusable="false">
+                                    <path
+                                        d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z">
+                                    </path>
+                                    <circle cx="12" cy="12" r="3.5"></circle>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- user image -->
+            <div class="col-lg-1 col-sm-6 col-6 mb-2 mt-2">
+                <div class="last">
+                    <div class="lastCog">
+                        <a href="#" title="Google Apps">
+                            <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/Apps.jpg">
+                        </a>
+
+                    </div>
+                    <div class="lastImg">
+                        <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/kunal.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- right Side -->
+    <div class="container-fluid rightSider">
+        <div class="row rightRow" id="images">
+
+            <!-- right images -->
+            <div class="images">
+                <div class="calender">
+                    <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/Calender.png" width="30px">
+                </div>
+                <div class="keep">
+                    <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/keep.png" width="30px">
+                </div>
+                <div class="task">
+                    <img src="/prerak-mentorship-frontend/Kunal/GoogleDriver/Images/task.png" width="30px">
+                </div>
+                <div class="line">
+                    ___
+                </div>
+                <div class="plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- open/close right slider -->
+        <div class="slider">
+
+            <div class="greater" onclick="closerSlider()" id="greater">
+                <svg class="Yb-Il-d-c" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px"
+                    viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#5F6368">
+                    <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
+                    <path fill="none" d="M0,0h24v24H0V0z"></path>
+                </svg>
+            </div>
+            <div class="less" onclick="openerSlider()" id="less">
+                <i class="fas fa-less-than"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- middle header -->
+
+    <div class="container-fluid middlecontainer">
+        <div class="row middlerow">
+            <!-- new -->
+            <div class="new">
+                <span>New</span>
+            </div>
+            <!-- middle left side -->
+            <div class="middlecontent" id="middle">
+                <span class="middle" id="middlecontent">My Drive
+                    <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10l5 5 5-5z"></path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                </span>
+                <div class="middleicon">
+                    <div class="grid">
+                        <svg class="a-s-fa-Ha-pa" width="24px" height="24px" viewBox="0 0 24 24" focusable="false"
+                            fill="#000000">
+                            <path
+                                d="M3,5v14h18V5H3z M7,7v2H5V7H7z M5,13v-2h2v2H5z M5,15h2v2H5V15z M19,17H9v-2h10V17z M19,13H9v-2h10V13z M19,9H9V7h10V9z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="info" id="info">
+                        <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="infocontent" id="infocontent">
+                        <div class="infomydrive">
+                            <div class="icon">
+                                <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false">
+                                    <path
+                                        d="M19 2H5C3.9 2 3 2.9 3 4V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V4C21 2.9 20.1 2 19 2ZM19 20H5V19H19V20ZM19 17H5V4H19V17Z">
+                                    </path>
+                                    <path
+                                        d="M13.1215 6H10.8785C10.5514 6 10.271 6.18692 10.0841 6.46729L7.14019 11.6075C7 11.8878 7 12.215 7.14019 12.4953L8.26168 14.4579C8.40187 14.7383 8.72897 14.9252 9.05608 14.9252H15.0374C15.3645 14.9252 15.6449 14.7383 15.8318 14.4579L16.9533 12.4953C17.0935 12.215 17.0935 11.8878 16.9533 11.6075L13.9159 6.46729C13.7757 6.18692 13.4486 6 13.1215 6ZM10.1776 12.0748L12.0467 8.8972L13.8692 12.0748H10.1776Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>My drive</span>
+                            <div class="infocross" id="infocross" onclick="infocross()">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bars -->
+    <div class="bars" onclick="bars()" id="bars">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- left Side -->
+
+    <div class="container-fluid leftSider" id="leftslider">
+        <div class="row leftrow">
+
+            <!-- tab navigation -->
+            <div class="left" id="left">
+                <div class="new-s">
+                    <span>New</span>
+                </div>
+                <div class="mydrive active" id="mydrive">
+                    <input type="checkbox" class="tab">
+                    <div class="icon">
+                        <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false">
+                            <path
+                                d="M19 2H5C3.9 2 3 2.9 3 4V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V4C21 2.9 20.1 2 19 2ZM19 20H5V19H19V20ZM19 17H5V4H19V17Z">
+                            </path>
+                            <path
+                                d="M13.1215 6H10.8785C10.5514 6 10.271 6.18692 10.0841 6.46729L7.14019 11.6075C7 11.8878 7 12.215 7.14019 12.4953L8.26168 14.4579C8.40187 14.7383 8.72897 14.9252 9.05608 14.9252H15.0374C15.3645 14.9252 15.6449 14.7383 15.8318 14.4579L16.9533 12.4953C17.0935 12.215 17.0935 11.8878 16.9533 11.6075L13.9159 6.46729C13.7757 6.18692 13.4486 6 13.1215 6ZM10.1776 12.0748L12.0467 8.8972L13.8692 12.0748H10.1776Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>My Drive</span>
+                </div>
+                <div class="shared" id="shared">
+                    <input type="checkbox" class="tab">
+                    <div class="icon">
+                        <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>Shared with me</span>
+                </div>
+                <div class="recent" id="recent">
+                    <input type="checkbox" class="tab">
+                    <div class="icon">
+                        <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false">
+                            <path
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                            </path>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
+                        </svg>
+                    </div>
+                    <span>Recent</span>
+                </div>
+                <div class="starred" id="starred">
+                    <input type="checkbox" class="tab">
+                    <div class="icon">
+                        <svg class="" width="24px" height="24px" viewBox="0 0 24 24" focusable="false" fill="#000000">
+                            <path
+                                d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>Starred</span>
+                </div>
+                <div class="bin" id="bin">
+                    <input type="checkbox" class="tab" />
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false" class=" ">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z">
+                            </path>
+                            <path d="M9 8h2v9H9zm4 0h2v9h-2z"></path>
+                        </svg>
+                    </div>
+                    <span>Bin</span>
+                </div>
+                <div class="leftLine">
+                    <span>______________________</span>
+                </div>
+                <div class="cloud" id="storage">
+                    <input type="checkbox" class="tab">
+                    <div class="icon">
+                        <svg class="a-s-fa-Ha-pa a-ml-da-Q-c" width="24px" height="24px" viewBox="0 0 24 24"
+                            focusable="false" fill="#6f6f6f">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h.71C7.37 7.69 9.48 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>Storage</span>
+                </div>
+                <div class="leftbtn">
+                    <input type="button" class="button" value="Buy storage"></input>
+                </div>
+            </div>
+
+            <!-- middle content -->
+            <div class="leftmiddle" id="leftmiddle">
+                <div class="qa">
+                    <h6>
+                        Quick access
+                    </h6>
+                </div>
+
+                <!-- 1st box -->
+
+                <div class="box">
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd box -->
+
+                <div class="box">
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 3rd box -->
+
+
+                <div class="box">
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 box-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio voluptatibus suscipit
+                            eligendi
+                            obcaecati labore mollitia quas facilis cupiditate ad. A non et sint voluptatum voluptatem
+                            repudiandae! Exercitationem, corrupti. Magni, ad.
+                        </p>
+                        <div class="title">
+                            <h4>Title</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/prerak-mentorship-frontend/Kunal/GoogleDriver/JS/Google.js"></script>
+
+</body>
+
+</html>
